@@ -11,6 +11,7 @@ class Command(BaseCommand):
         caregiver_group, created = Group.objects.get_or_create(name='Caregiver')
         elder_group, created = Group.objects.get_or_create(name='Elder')
         admin_group, created = Group.objects.get_or_create(name='Admin')
+        patient_group, created = Group.objects.get_or_create(name='Patient')
 
         # Assign permissions to groups
         content_type = ContentType.objects.get_for_model(User)
